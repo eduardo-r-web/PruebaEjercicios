@@ -1,0 +1,48 @@
+﻿<section ng-controller="ejercicio5">
+
+    <h2>Base de datos Northwind</h2>
+
+    <div class="form-group col-md-3">
+        <label for="buscar">Filtrar Por ProductID</label>
+        <input type="number" id="buscar" class="form-control" autocomplete="off" ng-model="idProducto" />
+    </div>
+    <div class="form-group col-md-12">
+        <button ng-click="filtrar()" class="btn btn-primary">filtrar</button>
+    </div>
+    <div class="form-group col-md-12">
+        <button ng-click="insertarNuevoProducto()" class="btn btn-success">Ingresar un nuevo producto</button>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ProductID</th>
+                <th>ProductName</th>
+                <th>SupplierID</th>
+                <th>CategoryID</th>
+                <th>QuantityPerUnit</th>
+                <th>UnitPrice</th>
+                <th>UnitsInStock</th>
+                <th>UnitsOnOrder</th>
+                <th>ReorderLevel</th>
+                <th>Discontinued</th>
+                <th>Modificar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="producto in productos">
+                <td>{{producto.ProductID}}</td>
+                <td>{{producto.ProductName}}</td>
+                <td>{{producto.SupplierID}}</td>
+                <td>{{producto.CategoryID}}</td>
+                <td>{{producto.QuantityPerUnit}}</td>
+                <td>{{producto.UnitPrice}}</td>
+                <td>{{producto.UnitsInStock}}</td>
+                <td>{{producto.UnitsOnOrder}}</td>
+                <td>{{producto.ReorderLevel}}</td>
+                <td>{{producto.Discontinued}}</td>
+                <td ng-click="modificarProducto(producto.ProductID)">click</td>
+            </tr>
+        </tbody>
+    </table>
+
+</section>

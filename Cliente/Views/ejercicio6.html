@@ -1,0 +1,105 @@
+﻿<section ng-controller="ejercicio6">
+    <div class="col-md-6 col-md-offset-3">
+        <h2 class="text-center">Juego de triqui Cliente-Servidor</h2>
+        <div class="form-group">
+            <label for="nombre">Nickname</label>
+            <input type="text" class="form-control" id="nombre" ng-model="nombre" required />
+        </div>
+        <div class="form-group">
+            <h4>Jugador 1:</h4>
+            <h3 ng-bind="nombreJugador1"></h3>
+        </div>
+        <div class="form-group">
+            <h4>Jugador 2:</h4>
+            <h3 ng-bind="nombreJugador2"></h3>
+        </div>
+        <div>
+            <button class="btn btn-primary" ng-click="unirseApartida(); jugar()">Jugar</button>
+        </div>
+        <div>
+        <div class="form-group">
+            <h2 ng-bind="resultado" class="text-center"></h2>
+        </div>
+            <table class="tabla-triqui">
+                <tr>
+                    <td class="celda" ng-click="columnaSeleccionada = 0; filaSeleccionada = 0; enviarJugada()">
+                        <div ng-if="tablero[0][0] == 2">
+                            <img src="../img/aro.png" alt="dibujo de un aro" />
+                        </div>
+                        <div ng-if="tablero[0][0] == 1">
+                            <img src="../img/x.png" alt="dibujo de una equis" />
+                        </div>
+                    </td>
+                    <td class="celda" ng-click="columnaSeleccionada = 1; filaSeleccionada = 0; enviarJugada()">
+                        <div ng-if="tablero[0][1] == 2">
+                            <img src="../img/aro.png" alt="dibujo de un aro" />
+                        </div>
+                        <div ng-if="tablero[0][1] == 1">
+                            <img src="../img/x.png" alt="dibujo de una equis" />
+                        </div>
+                    </td>
+                    <td class="celda" ng-click="columnaSeleccionada = 2; filaSeleccionada = 0; enviarJugada()">
+                        <div ng-if="tablero[0][2] == 2">
+                            <img src="../img/aro.png" alt="dibujo de un aro" />
+                        </div>
+                        <div ng-if="tablero[0][2] == 1">
+                            <img src="../img/x.png" alt="dibujo de una equis" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celda" ng-click="columnaSeleccionada = 0; filaSeleccionada = 1; enviarJugada()">
+                        <div ng-if="tablero[1][0] == 2">
+                            <img src="../img/aro.png" alt="dibujo de un aro" />
+                        </div>
+                        <div ng-if="tablero[1][0] == 1">
+                            <img src="../img/x.png" alt="dibujo de una equis" />
+                        </div>
+                    </td>
+                    <td class="celda" ng-click="columnaSeleccionada = 1; filaSeleccionada = 1; enviarJugada()">
+                        <div ng-if="tablero[1][1] == 2">
+                            <img src="../img/aro.png" alt="dibujo de un aro" />
+                        </div>
+                        <div ng-if="tablero[1][1] == 1">
+                            <img src="../img/x.png" alt="dibujo de una equis" />
+                        </div>
+                    </td>
+                    <td class="celda" ng-click="columnaSeleccionada = 2; filaSeleccionada = 1; enviarJugada()">
+                        <div ng-if="tablero[1][2] == 2">
+                            <img src="../img/aro.png" alt="dibujo de un aro" />
+                        </div>
+                        <div ng-if="tablero[1][2] == 1">
+                            <img src="../img/x.png" alt="dibujo de una equis" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celda" ng-click="columnaSeleccionada = 0; filaSeleccionada = 2; enviarJugada()">
+                        <div ng-if="tablero[2][0] == 2">
+                            <img src="../img/aro.png" alt="dibujo de un aro" />
+                        </div>
+                        <div ng-if="tablero[2][0] == 1">
+                            <img src="../img/x.png" alt="dibujo de una equis" />
+                        </div>
+                    </td>
+                    <td class="celda" ng-click="columnaSeleccionada = 1; filaSeleccionada = 2; enviarJugada()">
+                        <div ng-if="tablero[2][1] == 2">
+                            <img src="../img/aro.png" alt="dibujo de un aro" />
+                        </div>
+                        <div ng-if="tablero[2][1] == 1">
+                            <img src="../img/x.png" alt="dibujo de una equis" />
+                        </div>
+                    </td>
+                    <td class="celda" ng-click="columnaSeleccionada = 2; filaSeleccionada = 2; enviarJugada()">
+                        <div ng-if="tablero[2][2] == 2">
+                            <img src="../img/aro.png" alt="dibujo de un aro" />
+                        </div>
+                        <div ng-if="tablero[2][2] == 1">
+                            <img src="../img/x.png" alt="dibujo de una equis" />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</section>

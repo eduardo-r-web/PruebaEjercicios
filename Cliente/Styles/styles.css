@@ -1,0 +1,45 @@
+﻿img {
+    max-width: 100%;
+    display: block;
+}
+
+.ejercicio1 {
+    margin-bottom: 10em;
+}
+
+.btn-personalizado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 7em;
+    height: 7em;
+    padding: 1em;
+    margin: 1em 2em;
+}
+
+.btn-personalizado:hover {
+        transform: scale(1.2);
+        transition: ease-in-out .4s;
+        z-index: 1000;
+        background-color: white;
+        box-shadow: 1px 1px 10px 0 rgba(78, 182, 78, 0.466);
+    }
+
+.activo {
+    transform: scale(1.2);
+    background-color: white !important;
+    box-shadow: 1px 1px 10px 0 rgba(78, 182, 78, 0.466);
+}
+
+.tabla-triqui{
+    margin: 4em auto;
+    text-align: center;
+}
+
+.celda {
+    width: 5em;
+    height: 5em;
+    border: 2px solid white;
+    background-color: cadetblue;
+    padding: .5em;
+}

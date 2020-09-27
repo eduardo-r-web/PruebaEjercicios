@@ -1,0 +1,71 @@
+﻿<section ng-controller="ejercicio4">
+    <h2 class="text-center">Piedra Papel o Tijera Cliente-servidor</h2>
+    <form class="col-md-8 col-md-offset-2 ejercicio1" ng-submit="enviar()">
+        <div class="form-group">
+            <label class="">Nombre</label>
+            <input type="text" ng-model="jugador.nombre" autocomplete="off" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label>Seleccionar Estrategia</label>
+            <div class="row">
+                <div class="col-xs-3 col-md-2">
+                    <a href="" class="btn btn-personalizado btn-default" ng-click="jugador.estrategia = 1">
+                        <img src="../img/roca.jpg" alt="Roca" style="height: 100%;">
+                        <div class="caption">
+                            <p>Roca</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-3 col-md-2">
+                    <a href="" class="btn btn-personalizado btn-default" ng-click="jugador.estrategia = 2">
+                        <img src="../img/lagarto.png" alt="Lagarto" style="height: 80%;">
+                        <div class="caption">
+                            <p>Lagarto</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-3 col-md-2">
+                    <a href="" class="btn btn-personalizado btn-default" ng-click="jugador.estrategia = 3">
+                        <img src="../img/papel.png" alt="Papel" style="height: 65%;">
+                        <div class="caption">
+                            <p>Papel</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-3 col-md-2">
+                    <a href="" class="btn btn-personalizado btn-default" ng-click="jugador.estrategia = 4">
+                        <img src="../img/spock.png" alt="Spock" style="height: 65%;">
+                        <div class="caption">
+                            <p>Spock</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-3 col-md-2">
+                    <a href="" class="btn btn-personalizado btn-default" ng-click="jugador.estrategia = 5">
+                        <img src="../img/tijeras.png" alt="Tijeras" style="height: 100%;">
+                        <div class="caption">
+                            <p>Tijeras</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <h3 ng-bind="resultado" class="text-center"></h3>
+
+        <div class="form-group">
+            <h4>jugador1: {{aux[0]}}</h4>
+            <h4>jugador2: {{aux[1]}}</h4>
+            <h4>Gandor: {{aux[2]}}</h4>
+        </div>
+        <div class="form-group">
+            <div class="col-md-6">
+                <input type="submit" value="Enviar" class="btn btn-block btn-primary">
+            </div>
+            <div class="col-md-6">
+                <button ng-click="reset()" class="btn btn-block btn-success">Reiniciar</button>
+            </div>
+        </div>
+
+    </form>
+</section>

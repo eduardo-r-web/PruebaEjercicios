@@ -1,0 +1,54 @@
+﻿<section>
+    <div class="modal-header">
+        <h3>Modificar un producto</h3>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            <label for="">ProductName</label>
+            <input type="text" class="form-control" ng-model="producto.ProductName" />
+        </div>
+        <div class="form-group">
+            <label for="">Supplier</label>
+            <select ng-model="producto.SupplierID" class="form-control">
+                <option ng-repeat="x in supplier" ng-value="{{x.SupplierId}}">{{x.CompanyName}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="">Category</label>
+            <select ng-model="producto.CategoryID" class="form-control">
+                <option ng-repeat="x in category" ng-value="{{x.CategoryId}}">{{x.CategoryName}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="">QuantityPerUnit</label>
+            <input type="text" class="form-control" ng-model="producto.QuantityPerUnit" />
+        </div>
+        <div class="form-group">
+            <label for="">UnitPrice</label>
+            <input type="number" class="form-control" ng-model="producto.UnitPrice" min="0" />
+        </div>
+        <div class="form-group">
+            <label for="">UnitsInStock</label>
+            <input type="number" class="form-control" ng-model="producto.UnitsInStock" min="0" />
+        </div>
+        <div class="form-group">
+            <label for="">UnitsOnOrder</label>
+            <input type="number" class="form-control" ng-model="producto.UnitsOnOrder" min="0" />
+        </div>
+        <div class="form-group">
+            <label for="">ReorderLevel</label>
+            <input type="number" class="form-control" ng-model="producto.ReorderLevel" min="0" />
+        </div>
+        <div class="form-group">
+            <label for="">Discontinued</label>
+            <select ng-model="producto.Discontinued" class="form-control">
+                <option ng-value="true">True</option>
+                <option ng-value="false">False</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="modificar()">Agregar</button>
+        <button class="btn btn-warning" ng-click="cancelar()">Cancelar</button>
+    </div>
+</section>

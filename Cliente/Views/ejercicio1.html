@@ -1,0 +1,117 @@
+﻿<section ng-controller="ejercicio1">
+    <h2 class="text-center">Piedra papel o tijera extendido</h2>
+    <form name="formJuego" class="col-md-8 col-md-offset-2 ejercicio1">
+        <div class="form-group">
+            <legend class="">Jugador 1</legend>
+            <label class="">Nombre</label>
+            <input type="text" name="nombre1" ng-model="nombre1" autocomplete="off" class="form-control" required />
+            <span style="color:red" ng-show="formJuego.nombre1.$error.required">Campo obligatorio!</span>
+        </div>
+        <div class="form-group">
+            <label>Seleccionar Estrategia</label>
+            <div class="row">
+                <div class="col-xs-3 col-md-2">
+                    <a href="" class="btn btn-personalizado btn-default" ng-click="eleccionJugador1 = 1; activar1()" ng-class="{'activo': btnActivo1[0]}">
+                        <img src="../img/roca.jpg" alt="Roca" title="Roca" style="height: 100%;">
+                        <div class="caption">
+                            <p>Roca</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-3 col-md-2">
+                    <a href="" class="btn btn-personalizado btn-default" ng-click="eleccionJugador1 = 2; activar1()" ng-class="{'activo': btnActivo1[1]}">
+                        <img src="../img/lagarto.png" alt="Lagarto" title="Lagarto" style="height: 80%;">
+                        <div class="caption">
+                            <p>Lagarto</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-3 col-md-2">
+                    <a href="" class="btn btn-personalizado btn-default" ng-click="eleccionJugador1 = 3; activar1()" ng-class="{'activo': btnActivo1[2]}">
+                        <img src="../img/papel.png" alt="Papel" title="Papel" style="height: 65%;">
+                        <div class="caption">
+                            <p>Papel</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-3 col-md-2">
+                    <a href="" class="btn btn-personalizado btn-default" ng-click="eleccionJugador1 = 4; activar1()" ng-class="{'activo': btnActivo1[3]}">
+                        <img src="../img/spock.png" alt="Spock" title="Spock" style="height: 65%;">
+                        <div class="caption">
+                            <p>Spock</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-3 col-md-2">
+                    <a href="" class="btn btn-personalizado btn-default" ng-click="eleccionJugador1 = 5; activar1()" ng-class="{'activo': btnActivo1[4]}">
+                        <img src="../img/tijeras.png" alt="Tijeras" title="Tijeras" style="height: 100%;">
+                        <div class="caption">
+                            <p>Tijeras</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <legend class="text-center">Jugador 2</legend>
+        <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" name="nombre2" ng-model="nombre2" autocomplete="off" class="form-control" required />
+            <span style="color:red" ng-show="formJuego.nombre2.$error.required">Campo obligatorio!</span>
+        </div>
+        <div class="form-group">
+            <label>Seleccionar Estrategia</label>
+            <div class="row">
+                <div class="col-xs-3 col-md-2">
+                    <a href="" class="btn btn-personalizado btn-default" ng-click="eleccionJugador2 = 1; activar2()" ng-class="{'activo': btnActivo2[0]}">
+                        <img src="../img/roca.jpg" alt="Roca" title="Roca" style="height: 100%;">
+                        <div class="caption">
+                            <p>Roca</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-3 col-md-2">
+                    <a href="" class="btn btn-personalizado btn-default" ng-click="eleccionJugador2 = 2; activar2()" ng-class="{'activo': btnActivo2[1]}">
+                        <img src="../img/lagarto.png" alt="Lagarto" title="Lagarto" style="height: 80%;">
+                        <div class="caption">
+                            <p>Lagarto</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-3 col-md-2">
+                    <a href="" class="btn btn-personalizado btn-default" ng-click="eleccionJugador2 = 3; activar2()" ng-class="{'activo': btnActivo2[2]}">
+                        <img src="../img/papel.png" alt="Papel" title="Papel" style="height: 65%;">
+                        <div class="caption">
+                            <p>Papel</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-3 col-md-2">
+                    <a href="" class="btn btn-personalizado btn-default" ng-click="eleccionJugador2 = 4; activar2()" ng-class="{'activo': btnActivo2[3]}">
+                        <img src="../img/spock.png" alt="Spock" title="Spock" style="height: 65%;">
+                        <div class="caption">
+                            <p>Spock</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-3 col-md-2">
+                    <a href="" class="btn btn-personalizado btn-default" ng-click="eleccionJugador2 = 5; activar2()" ng-class="{'activo': btnActivo2[4]}">
+                        <img src="../img/tijeras.png" alt="Tijeras" title="Tijeras" style="height: 100%;">
+                        <div class="caption">
+                            <p>Tijeras</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <h3 class="text-center">{{resEstrategia}}</h3>
+        <h3 ng-bind="res" class="text-center"></h3>
+        <div class="form-group">
+            <div class="col-md-6">
+                <button ng-click="jugar()" class="btn btn-block btn-primary">Jugar</button>
+            </div>
+            <div class="col-md-6">
+                <button ng-click="reset()" class="btn btn-block btn-success">Reiniciar</button>
+            </div>
+        </div>
+    </form>
+</section>

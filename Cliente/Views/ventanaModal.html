@@ -1,0 +1,37 @@
+﻿<section>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title">Detalle de Producto</h2>
+        </div>
+        <div class="modal-body row">
+            <div class="col-md-6">
+                <h3>Id Producto:</h3>
+                <h4>{{productos[0]}}</h4>
+                <h3>nombre del Producto:</h3>
+                <h4>{{productos[1]}}</h4>
+                <h3>Id Proveedor:</h3>
+                <h4>{{productos[2]}}</h4>
+                <h3>Id Categoria:</h3>
+                <h4>{{productos[3]}}</h4>
+                <h3>Cantidad por unidad:</h3>
+                <h4>{{productos[4]}}</h4>
+            </div>
+            <div class="col-md-6">
+                <h3>Precio Por Unidad:</h3>
+                <h4>{{productos[5]}}</h4>
+                <h3>Unidades en Stock:</h3>
+                <h4>{{productos[6]}}</h4>
+                <h3>Unidades en Orden:</h3>
+                <h4>{{productos[7]}}</h4>
+                <h3>reordenar nivel:</h3>
+                <h4>{{productos[8]}}</h4>
+                <h3>Descontinuado:</h3>
+                <h4>{{productos[9]}}</h4>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+</section>

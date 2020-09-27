@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prueba AngularJs</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="Styles/styles.css">
+</head>
+
+<body ng-app="practica" ng-controller="mainController">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand">Practica AngularJS</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li ng-if="logueado">
+                    <a class="navegacion-link" href="#!ejercicio1">Ejercicio 1</a>
+                </li>
+                <li ng-if="logueado">
+                    <a class="navegacion-link" href="#!ejercicio2">Ejercicio 2</a>
+                </li>
+                <li ng-if="logueado">
+                    <a class="navegacion-link" href="#!ejercicio3">Ejercicio 3</a>
+                </li>
+                <li ng-if="logueado">
+                    <a class="navegacion-link" href="#!ejercicio4">Ejercicio 4</a>
+                </li>
+                <li ng-if="logueado">
+                    <a class="navegacion-link" href="#!ejercicio5">Ejercicio 5</a>
+                </li>
+                <li ng-if="logueado">
+                    <a class="navegacion-link" href="#!ejercicio6">Ejercicio 6</a>
+                </li>
+                <li ng-if="!logueado" class="navegacion-item">
+                    <a class="navegacion-link" href="#!login">Login</a>
+                </li>
+                <li ng-if="logueado" class="navegacion-item">
+                    <a class="navegacion-link" href="#!logout">LogOut</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div ng-view></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="./Controllers/main.js"></script>
+    <script src="./Controllers/login.js"></script>
+    <script src="./Controllers/logout.js"></script>
+    <script src="./Controllers/ejercicio1.js"></script>
+    <script src="./Controllers/ejercicio2.js"></script>
+    <script src="./Controllers/ejercicio3.js"></script>
+    <script src="./Controllers/ejercicio4.js"></script>
+    <script src="./Controllers/ejercicio5.js"></script>
+    <script src="./Controllers/ejercicio6.js"></script>
+    <script src="./Controllers/ventanaModal.js"></script>
+    <script src="./Controllers/ejercicio5ModalPost.js"></script>
+    <script src="./Controllers/ejercicio5ModalPut.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+</body>
+
+</html>

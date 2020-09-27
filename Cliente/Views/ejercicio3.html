@@ -1,0 +1,46 @@
+﻿<section ng-controller="ejercicio3">
+    <div class="ejercicio3">
+        <h1 class="text-center">Consumir servicios</h1>
+        <div class="form-group">
+            <label for="buscar">Buscar</label>
+            <input type="search" ng-model="busquedaProducto" id="buscar" autocomplete="off" class="form-control">
+        </div>
+
+        <div class="table-responsive tabla-ejercicio3">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th class="ejercicio3-tabla-th" ng-click="orderByMe('ProductID')">ProductID</th>
+                        <th class="ejercicio3-tabla-th" ng-click="orderByMe('ProductName')">ProductName</th>
+                        <th class="ejercicio3-tabla-th" ng-click="orderByMe('SupplierID')">SupplierID</th>
+                        <th class="ejercicio3-tabla-th" ng-click="orderByMe('CategoryID')">CategoryID</th>
+                        <th class="ejercicio3-tabla-th" ng-click="orderByMe('QuantityPerUnit')">QuantityPerUnit</th>
+                        <th class="ejercicio3-tabla-th" ng-click="orderByMe('UnitPrice')">UnitPrice</th>
+                        <th class="ejercicio3-tabla-th" ng-click="orderByMe('UnitsInStock')">UnitsInStock</th>
+                        <th class="ejercicio3-tabla-th" ng-click="orderByMe('UnitsOnOrder')">UnitsOnOrder</th>
+                        <th class="ejercicio3-tabla-th" ng-click="orderByMe('ReorderLevel')">ReorderLevel</th>
+                        <th class="ejercicio3-tabla-th" ng-click="orderByMe('Discontinued')">Discontinued</th>
+                        <th>Detalle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="valor in bd.value | filter: busquedaProducto | orderBy:myOrderBy">
+                        <td ng-bind="valor.ProductID"></td>
+                        <td ng-bind="valor.ProductName"></td>
+                        <td ng-bind="valor.SupplierID"></td>
+                        <td ng-bind="valor.CategoryID"></td>
+                        <td ng-bind="valor.QuantityPerUnit"></td>
+                        <td ng-bind="valor.UnitPrice"></td>
+                        <td ng-bind="valor.UnitsInStock"></td>
+                        <td ng-bind="valor.UnitsOnOrder"></td>
+                        <td ng-bind="valor.ReorderLevel"></td>
+                        <td ng-bind="valor.Discontinued"></td>
+                        <td>
+                            <button class="btn btn-default" ng-click="verDetalle(valor.ProductID); open()">ver</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
